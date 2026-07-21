@@ -9,15 +9,20 @@ const cursorGlow = document.querySelector('.cursor-glow');
 if (cursorGlow) cursorGlow.hidden = true;
 
 let savedTheme = null;
+
 try {
   savedTheme = localStorage.getItem('portfolio-theme');
 } catch (error) {
   savedTheme = null;
 }
 
-if (savedTheme === 'light') {
-  body.classList.add('light-theme');
-  if (themeIcon) themeIcon.textContent = '☾';
+const initialTheme = savedTheme || 'light';
+const isLightTheme = initialTheme === 'light';
+
+body.classList.toggle('light-theme', isLightTheme);
+
+if (themeIcon) {
+  themeIcon.textContent = isLightTheme ? '☾' : '☼';
 }
 
 let scrollTicking = false;
