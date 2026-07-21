@@ -247,3 +247,13 @@ document.querySelectorAll('[data-modal]').forEach((button) => button.addEventLis
 document.querySelectorAll('[data-close-modal]').forEach((element) => element.addEventListener('click', closeModal));
 window.addEventListener('keydown', (event) => { if (event.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
 
+const backToTop = document.querySelector('a[href="#inicio"]');
+
+backToTop?.addEventListener('click', (event) => {
+  event.preventDefault();
+
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
