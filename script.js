@@ -56,15 +56,14 @@ themeToggle?.addEventListener('click', () => {
   try {
     localStorage.setItem('portfolio-theme', isLight ? 'light' : 'dark');
   } catch (error) {
-    // El almacenamiento local puede estar deshabilitado.
+
   }
 });
 
 const revealElements = [...document.querySelectorAll('.reveal')];
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// Pequeño escalonado únicamente entre elementos hermanos. El límite evita que
-// una sección tarde demasiado en aparecer y mantiene el desplazamiento ligero.
+
 revealElements.forEach((element) => {
   const siblings = [...(element.parentElement?.children || [])]
     .filter((child) => child.classList.contains('reveal'));

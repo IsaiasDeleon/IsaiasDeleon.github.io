@@ -227,10 +227,7 @@ body.light-theme .metric-card strong { color: #102038; }
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}.reveal{opacity:1;transform:none}
 }
 
-/* =========================================================
-   Ajustes de rendimiento y escala tipográfica
-   Mantienen la estética futurista sin sobrecargar el scroll.
-   ========================================================= */
+
 :root {
   --container: 1160px;
   --shadow: 0 20px 56px rgba(0, 0, 0, 0.27);
@@ -246,14 +243,13 @@ body {
   line-height: 1.58;
 }
 
-/* La textura fija y el halo que seguía el cursor provocaban repintados
-   completos durante el desplazamiento. El fondo conserva sus gradientes. */
+
 .noise,
 .cursor-glow {
   display: none !important;
 }
 
-/* Evita desenfoques costosos mientras se desplaza la página. */
+
 .site-header.scrolled,
 .availability-pill,
 .tech-float,
@@ -383,8 +379,7 @@ body.light-theme .availability-pill {
   font-size: 0.59rem;
 }
 
-/* Se eliminan animaciones perpetuas. El sitio conserva animaciones de entrada
-   y estados hover, pero ya no repinta elementos mientras el usuario lee. */
+
 .floating-card,
 .tech-float-one,
 .tech-float-two,
@@ -501,7 +496,7 @@ body.light-theme .availability-pill {
   font-size: 0.88rem;
 }
 
-/* El navegador puede omitir el render de secciones fuera de pantalla. */
+
 .about-section,
 .projects-section,
 .industrial-section,
@@ -512,7 +507,7 @@ body.light-theme .availability-pill {
   contain-intrinsic-size: 800px;
 }
 
-/* Animación de entrada más corta y con menor desplazamiento. */
+
 .reveal {
   transform: translateY(16px);
   transition: opacity 0.42s ease, transform 0.42s ease;
@@ -635,9 +630,7 @@ body.light-theme .availability-pill {
 }
 
 
-/* =========================================================
-   Hero refinado: imagen principal más grande y mejor balance
-   ========================================================= */
+
 .hero .container {
   width: min(calc(100% - 56px), 1380px);
 }
@@ -920,10 +913,7 @@ body.light-theme .availability-pill {
 }
 
 
-/* =========================================================
-   Ajuste estable de scroll e imágenes
-   Mantiene el diseño anterior sin marcos de celular/navegador.
-   ========================================================= */
+
 
 .about-section,
 .projects-section,
@@ -1035,9 +1025,7 @@ body {
     scroll-behavior: auto !important;
   }
 }
-/* ========================================
-   CONTACTO SIN FORMULARIO
-======================================== */
+
 
 .contact-section .contact-card {
   display: block;
@@ -1115,10 +1103,7 @@ body {
     padding: 27px 20px;
   }
 }
-/* =========================================================
-   Scroll fluido + aparición progresiva
-   Animaciones de una sola vez, sin filtros fijos ni sombras animadas.
-   ========================================================= */
+
 
 .no-js .reveal {
   opacity: 1 !important;
